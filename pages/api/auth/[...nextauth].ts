@@ -19,7 +19,13 @@ export default NextAuth(
 			{
 				if (credentials.username.toLowerCase() == "upeshp" && credentials.password === process.env.PASSWORD)
 				{
-					const user = { id: 1, name: "Upesh Patel", email: "upesh_patel@tamsinfotech.com" }
+					const user = 
+					{ 
+						id: 1, 
+						name: "Upesh Patel", 
+						email: "upesh_patel@tamsinfotech.com" ,
+						token: process.env.USER_TOKEN
+					}
 					return user
 				}
 
