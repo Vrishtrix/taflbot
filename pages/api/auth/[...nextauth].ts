@@ -3,8 +3,6 @@ import CredentialsProvider from "next-auth/providers/credentials"
 
 export default NextAuth(
 {
-	secret: "QH7Bs8DudJmxWFHmaISndmawlj8/jQRMTotuW/HgzaA=",
-	
 	providers: [
 		CredentialsProvider(
 		{
@@ -33,6 +31,8 @@ export default NextAuth(
 			}
 		}
 		)
-	]
+	],
+
+	secret: "QH7Bs8DudJmxWFHmaISndmawlj8/jQRMTotuW/HgzaA="
 }
 )
