@@ -1,14 +1,16 @@
 import instance from "@util/axios_instance"
 
-const contactFetcher = async (token : String) =>
+const contactFetcher = (token : String) =>
 {
-	const { data } = await instance.post(
+	const data = instance.post(
 		"/roster.listContacts",
 		{
 			token
 		}
 	)
-
+	.then(res => res.data)
+	.catch(err => err)
+	
 	return data
 }
 
